@@ -1,6 +1,6 @@
 <?php
 
-function fotografMeta($imagePath) {
+function PhotoMetaData($imagePath) {
 
     if ((isset($imagePath)) and (file_exists($imagePath))) {
    
@@ -54,11 +54,11 @@ function fotografMeta($imagePath) {
 }
 
 
-$fotograf = fotografMeta("/img/myphoto.jpg");
-echo "Used: " . $fotograf['make'] . " " . $fotograf['model'] . "<br />";
-echo "Exposure Time: " . $fotograf['exposure'] . "<br />";
-echo "Aperture: " . $fotograf['aperture'] . "<br />";
-echo "ISO: " . $fotograf['iso'] . "<br />";
-echo "Date Taken: " . $fotograf['date'] . "<br />";
+$photometa = PhotoMetaData("/img/myphoto.jpg");
+echo "Used: " . $photometa['make'] . " " . $photometa['model'] . "<br />";
+echo "Exposure Time: " . $photometa['exposure'] . "<br />";
+echo "Aperture: " . $photometa['aperture'] . "<br />";
+echo "ISO: " . $photometa['iso'] . "<br />";
+echo "Date Taken: " . $photometa['date'] . "<br />";
 
 ?>
